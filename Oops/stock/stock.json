@@ -1,0 +1,14 @@
+{
+  "stock": [
+    {
+      "names":"Infosys",
+      "share":987897,
+      "price": 789
+    },
+    {
+      "names":"Ibm",
+      "share":7678,
+      "price": 7809
+    }
+  ]
+}

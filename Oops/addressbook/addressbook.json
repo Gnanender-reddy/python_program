@@ -1,0 +1,49 @@
+{
+  "address": [
+    {
+      "first_name": "gnani",
+      "last_name": "reddy",
+      "address": "hyderabad",
+      "city": "lkjh",
+      "state": "hlk",
+      "zip": "897987",
+      "Phone_number": "876786876876876768888888888888"
+    },
+    {
+      "first_name": "jkjhg",
+      "last_name": "jhlkj",
+      "address": "jlk",
+      "city": "kl",
+      "state": "lkj",
+      "zip": "987",
+      "Phone_number": "098"
+    },
+    {
+      "first_name": "kljsf",
+      "last_name": "fdsgh",
+      "address": "gdsfkjlg",
+      "city": "jk",
+      "state": "khklj",
+      "zip": "56",
+      "Phone_number": "6546"
+    },
+    {
+      "first_name": "jkhg",
+      "last_name": "ghkg",
+      "address": "hkjh",
+      "city": "hkjh",
+      "state": "hkj",
+      "zip": "2345",
+      "Phone_number": "543"
+    },
+    {
+      "first_name": "jhgjh",
+      "last_name": "kjhj",
+      "address": "kjhkj",
+      "city": "klkl",
+      "state": "hjkh",
+      "zip": "87987987",
+      "Phone_number": "98798798797987"
+    }
+  ]
+}
