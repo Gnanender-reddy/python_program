@@ -1,3 +1,11 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for finding factorial of number.
+
+"""
+
+
 from com.bridgelabz.FunctionalPrograms.Utility import factorial
 
 try:

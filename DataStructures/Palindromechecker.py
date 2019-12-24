@@ -1,3 +1,13 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Palindrome Checker.
+
+"""
+
+
+
+
 from com.bridgelabz.DataStructures.Utility1 import Deque
 
 

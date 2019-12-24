@@ -1,25 +1,25 @@
-'''
+"""
 @Author: P.Gnanender Reddy
 @Since : Dec'19
 Keywords: json.
 Description: In this we created management system to adding data to json file and also I created manager class and
 in that adding inventory function is created so that data  will be added to json file.
-'''
+"""
 import json
 class Manager:
-    '''
-    This manager class having functions like inventory factory and adding inventory.
-    '''
+    """
+    Summary:This manager class having functions like inventory factory and adding inventory.
+    """
     def __init__(self,file):
-        '''
-        Taking file as input
-        '''
+        """
+        Summary:Initializing instance of this class.
+        """
         self.file=file
         self.inventory=None
     def inventory_factory(self):
-        '''
-        This function provides total cost of item ny multiplying weight and price of item.
-        '''
+        """
+        Summary:This function provides total cost of item ny multiplying weight and price of item.
+        """
         with open(self.file) as f:
             #opening file as f
             self.inventory=json.load(f)
@@ -28,9 +28,9 @@ class Manager:
             #looping thrrough the items.
             print({item['weight'] * item['price/kg']})
     def adding_inventory(self):
-        '''
-        this function provides access to user for adding items to inventory.
-        '''
+        """
+        Summary:This function provides access to user for adding items to inventory.
+        """
         product=input("enter product name ")
         #user input
         product_weight=int(input("enter product weight"))
@@ -51,6 +51,9 @@ class Manager:
             json.dump(self.inventory,f,indent=2)
             #dumping data to json file
 if __name__ == '__main__':
+    """
+    Summary: Driver Code
+    """
     manager=Manager("Inventorymanage.json")
     #creating Manager object
     manager.inventory_factory()

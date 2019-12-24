@@ -1,4 +1,11 @@
-#code for Quadratic.
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for finding quadratic.
+
+"""
+
+
 from com.bridgelabz.FunctionalPrograms.Utility import quadratic
 
 try:

@@ -1,3 +1,11 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for bubbleSort.
+
+"""
+
+
 from com.bridgelabz.AlgorithmPrograms.util import bubblesort
 try:
     nums = []                                  #declaring list

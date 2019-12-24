@@ -1,3 +1,8 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Balanced Paranthesis.
+"""
 from com.bridgelabz.DataStructures.Utility1 import Stack
 
 

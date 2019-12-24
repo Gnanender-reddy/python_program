@@ -1,3 +1,13 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code consists all utilities.
+
+"""
+
+
+
+
 #functions for stack
 #creating stack(LIFO manner) class
 class Stack:

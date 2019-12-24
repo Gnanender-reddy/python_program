@@ -1,3 +1,11 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for anagram checking.
+
+"""
+
+
 from com.bridgelabz.AlgorithmPrograms.util import anagram
 s1=int(input("enter 1st string"))#input from user
 s2=input("enter 2nd string")     #input from user

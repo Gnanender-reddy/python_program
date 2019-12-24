@@ -1,3 +1,12 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Prime Queue.
+
+"""
+
+
+
 from com.bridgelabz.DataStructures.Utility1 import LinkedList
 
 

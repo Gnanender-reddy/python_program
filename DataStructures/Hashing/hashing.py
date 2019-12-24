@@ -1,3 +1,11 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for hashing.
+"""
+
+
+
 from com.bridgelabz.DataStructures.Utility1 import LinkedList
 
 def hashfunction():

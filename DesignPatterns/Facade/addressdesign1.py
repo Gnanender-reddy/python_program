@@ -1,27 +1,32 @@
-'''
+"""
 @Author : P.Gnanender Reddy
 @Since : Dec'2019
 @Keywords:json,encapsulation.
 @Description:In this we defined class along with three definitions.They are Adding details function in address book, updating data in
 address book and deleting data in address book.
-'''
+"""
+
 import json
 
 
 class Addressbook:
-    '''
-    In this class we created functions like adding details,updating details,deleting data.
-    '''
+    """
+    Summary:In this class we created functions like adding details,updating details,deleting data.
+    """
 
     def __init__(self, file):
+        """
+        Summary:Initializing the new instance of this class.
+
+        """
         self.file = file
         self.data1 = None
 
     def add_details(self):
-        '''
-        This function helps us in adding details in address book, it takes users first name, last name, address, city,
+        """
+        Summary:This function helps us in adding details in address book, it takes users first name, last name, address, city,
         phone number, zip code.
-        '''
+        """
 
         try:
             __firstname = input("enter your first name")
@@ -99,11 +104,11 @@ class Addressbook:
             print("provide valid data")
 
     def update_details(self):
-            '''
-            This function works in way that it provides access to user to update his/her details,
+            """
+            Summary:This function works in way that it provides access to user to update his/her details,
             First it opens json file and load data in object and takes input from user, so that it
             adds data to json file.
-            '''
+            """
 
             with open(self.file, 'r+') as f:
                 # opening file
@@ -141,8 +146,6 @@ class Addressbook:
                         item['first_name'] = fn
                         print("your first name is updated successfully")
                         while not fn.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             fn = input("Please enter your valid first name to be replaced in old first name")
                             item['first_name'] = fn
                             print("your first name is updated successfully")
@@ -153,8 +156,6 @@ class Addressbook:
                         item['last_name'] = ln
                         print("your last name is updated successfully")
                         while not ln.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             ln = input("Please enter your valid last name to be replaced in old last name ")
                             item['last_name'] = ln
                             print("your last name is updated successfully")
@@ -166,8 +167,6 @@ class Addressbook:
                         item['address'] = ad
                         print("your address is updated successfully")
                         while not ad.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             ad = input("Please enter your valid address to be replaced in old address ")
                             item['address'] = ad
                             print("your address is updated successfully")
@@ -179,8 +178,6 @@ class Addressbook:
                         item['city'] = ct
                         print("your city name is updated successfully")
                         while not ct.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             ct = input("Please enter your valid city name to be replaced in old city name ")
                             item['city'] = ct
                             print("your city name is updated successfully")
@@ -191,8 +188,6 @@ class Addressbook:
                         item['state'] = st
                         print("your state name is updated successfully")
                         while not st.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             st = input("please enter valid state name to be replaced in old state name ")
                             item['state'] = st
                             print("your state name is updated successfully")
@@ -204,8 +199,6 @@ class Addressbook:
                         item['zip'] = zp
                         print("your zip code is updated successfully")
                         while zp.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
-
                             zp = input("please enter your valid zip code to be replaced in old zip code ")
                             item['zip'] = zp
                             print("your zip code is updated successfully")
@@ -216,7 +209,6 @@ class Addressbook:
                         item['Phone_number'] = phone
                         print("your phone number is updated successfully")
                         while phone.isalpha():
-                            #Checking provided user input whether it is in alphabets or not.
                             phone = input("Please enter your valid last number to be replaced in old number ")
                             item['Phone_number'] = phone
                             print("your phone number is updated successfully")
@@ -233,10 +225,10 @@ class Addressbook:
 
 
     def delete_data(self):
-        '''
-        This function helps us in deleting data in address book, taking first name as input, using first name data
+        """
+        Summary:This function helps us in deleting data in address book, taking first name as input, using first name data
         will be deleted.
-        '''
+        """
 
         with open(self.file, 'r+') as f:
             #this is for opening a file

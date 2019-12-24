@@ -1,3 +1,13 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Ordered List.
+
+"""
+
+
+
+
 from com.bridgelabz.AlgorithmPrograms.util import bubblesort
 from com.bridgelabz.DataStructures.Utility1 import LinkedList, Node,Queue,Stack
 

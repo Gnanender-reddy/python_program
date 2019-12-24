@@ -1,3 +1,9 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Prime anagram.
+
+"""
 
 def primes(n): #defining function for primes
     array = [i for i in range(2,n+1)] #taking range up to n+1

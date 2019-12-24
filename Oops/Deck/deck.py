@@ -7,10 +7,15 @@
 '''
 import random
 class card:
-    '''
-    This class is for providing cards for deck of cards.
-    '''
+    """
+    Summary:This class is for providing cards for deck of cards.
+    """
     def __init__(self,suit,rank):
+        """
+
+        Summary: This function is for initializing instance.
+
+        """
         self.suit=suit
         self.rank=rank
     def __str__(self):
@@ -20,35 +25,35 @@ class Deck:
     ranks = {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10,
              'Jack': 11, 'Queen': 12, 'King': 13, 'Ace': 14}
     def __init__(self):
-        '''
-        creating object for creating card.
-        '''
+        """
+        Summary:In initializing instance for this  class.
+        """
         self.deck=[]
         for suit in self.suits:
             for rank in self.ranks:
                 self.deck.append(card(suit,rank))
     def shuffle(self):
-        '''
-        this function shuffles cards,like mixing cars
-        '''
+        """
+        Summary:this function shuffles cards,like mixing cars
+        """
         number=int(input("enter any number to shuffle"))
         for i in range(number):
             random.shuffle(self.deck)
     def deal(self):
-        '''
-        This function provides deal to players
-        '''
+        """
+        Summary: This function provides deal to players
+        """
         return self.deck.pop()
     def show(self):
-        '''
-        This function provides displaying cards
-        '''
+        """
+        Summary:This function provides displaying cards
+        """
         for item in self.deck:
             print(item)
     def distribute_to_players(self):
-        '''
-        this function distributes card to players
-        '''
+        """
+        Summary:This function distributes card to players
+        """
         player=[]
         #taking an empty list
         for i in range(4):

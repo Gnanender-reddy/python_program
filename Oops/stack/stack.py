@@ -1,10 +1,10 @@
-'''
+"""
 @Author : P.Gnanender Reddy
 @Since : Dec'2019
 @Keywords:json,encapsulation.
 @Description:This code is for Stock Symbol Purchased or Sold in a Stack implemented using Linked List to indicate transactions done.
 
-'''
+"""
 
 
 
@@ -15,7 +15,10 @@ from com.bridgelabz.DataStructures.Utility1 import LinkedList, Stack
 
 class TransactionStack:
     def __init__(self):
-        #constructing the object
+        """
+        Summary: Initializing instance of this class.
+        """
+
 
         self.stack = Stack()
         with open("stack.json") as data:
@@ -28,9 +31,9 @@ class TransactionStack:
                     self.stack.push(i)
 
     def transaction_stack(self):
-        '''
-        This function helps us to push all transactions to stack
-        '''
+        """
+        Summary:This function helps us to push all transactions to stack
+        """
         try:
             transaction = input("Enter transaction amount")
             while not transaction.isnumeric():
@@ -63,9 +66,9 @@ class TransactionStack:
             print("You have entered wrong data:")
 
     def save_transaction(self):
-        '''
-        this function works like it dumps data to json file, so it saves transaction.
-        '''
+        """
+        Summary:this function works like it dumps data to json file, so it saves transaction.
+        """
 
         temp1 = []
         #taking empty list
@@ -82,7 +85,9 @@ class TransactionStack:
 
 # Main method
 if __name__ == "__main__":
-    #driver code
+    """
+    Summary: Driver code.
+    """
     obj = TransactionStack()
     obj.transaction_stack()
     obj.save_transaction()

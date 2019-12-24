@@ -1,3 +1,10 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for CountCurrency.
+
+"""
+
 from com.bridgelabz.AlgorithmPrograms.util import countCurrency
 
 try:

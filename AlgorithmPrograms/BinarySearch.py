@@ -1,3 +1,11 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for binary search.
+
+"""
+
+
 from com.bridgelabz.AlgorithmPrograms.util import binarysearch
 try:
     lst = []                                                            #declaring empty list

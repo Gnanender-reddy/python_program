@@ -1,3 +1,10 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for QuickSort.
+
+"""
+
 from com.bridgelabz.AlgorithmPrograms.util import quick_sort
 
 try:

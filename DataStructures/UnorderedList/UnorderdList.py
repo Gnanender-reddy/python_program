@@ -1,7 +1,15 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Unordered List.
+
+"""
+
 
 from com.bridgelabz.DataStructures.Utility1 import LinkedList, Node,Queue,Stack
 
 def unordered_list():
+
    file = open('/home/admin1/PycharmProjects/FellowShipPrograms/com/bridgelabz/'
              'DataStructures/UnorderedList/Text.txt', "r") # file is created and from that file iam reading the data
 

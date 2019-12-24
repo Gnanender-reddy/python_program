@@ -1,7 +1,19 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Description:This code is for Banking Cash Counter.
+
+"""
+
+
+
 from com.bridgelabz.DataStructures.Utility1 import Queue
 
 #creating a class for bankingcashcounter
 class BankingCashCounter:
+    """
+    Summary:This class is for Banking cash Counter.
+    """
     s=Queue()
     balance=800
     while True:

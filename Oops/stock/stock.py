@@ -1,8 +1,8 @@
-'''
+"""
 @Author:P.Gnanender Reddy
 @Since: Dec'19
 Description: This code is implemented for finding top companies shares..etc.
-'''
+"""
 
 
 
@@ -10,17 +10,21 @@ import json
 
 
 class Stock:
-    '''
-    This stock class contains functions like stock calculation and calculation for one company
-    '''
+    """
+    Summary:This stock class contains functions like stock calculation and calculation for one company
+    """
     def __init__(self,file):
+        """
+        Summary:Initializing instance of this class.
+
+        """
         self.file=file
         self.data1=None
 
     def stock_calculation(self):
-        '''
-        this function works like, it provides each and every company stock calculation
-        '''
+        """
+        Summary:This function works like, it provides each and every company stock calculation
+        """
         print("Here you can find each and every company's calculation\n")
         with open(self.file) as f:
             self.data1=json.load(f)
@@ -30,9 +34,9 @@ class Stock:
             print("\n")
 
     def calculation_one(self):
-            '''
+            """
             this function provides one report according to company name provided by user
-            '''
+            """
             try:
                 company_name=input("Enter company name for which you want to find total price")
                 with open(self.file) as f:
@@ -49,9 +53,9 @@ class Stock:
 
 
 def main():
-    '''
-    Driver code: Execution starts here
-    '''
+    """
+    Summary: Execution starts here
+    """
     if __name__ == '__main__':
         stock=Stock("stock.json")
         print("welcome to stock management")

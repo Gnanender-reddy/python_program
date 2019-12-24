@@ -1,90 +1,163 @@
+"""
+@Author : P.Gnanender Reddy
+@Since : Dec'2019
+@Keywords:Abstraction,Factory pattern.
+@Description:This code is for Computer Factory that can Produce Laptop and Server Class Computers.Abstract class for
+Computer is designed and  Laptop, Server inherit from Computer and computerFactory is able to create the corresponding
+Computer Object on request.
+"""
 from abc import ABC, abstractmethod
-import re
+
 
 class Computer(ABC):
+    """
+    Summary: This computer class is abstraction class. And it contains abstract methods like get color,get ram,display
+    specifications.
+    """
     @abstractmethod
-    def getprocessor(self,processor):
+    def getColor(self):
+        """
+        Summary:This method is an abstract method, which is incomplete method(no definition).And this method is impleme-
+        -nted in subclass.
+        """
         pass
 
     @abstractmethod
-    def getram(self,ram):
-        pass
-    @abstractmethod
-    def getstorage(self,storage):
+    def getRam(self):
+        """
+        Summary:This method is an abstract method, which is incomplete method(no definition).And this method is impleme-
+        -nted in subclass.
+        """
         pass
 
+    @abstractmethod
+    def displaySpecifications(self):
+        """
+        Summary:This method is an abstract method, which is incomplete method(no definition).And this method is impleme-
+        -nted in subclass.
+        """
+        pass
 
 
 class Server(Computer):
-    def __init__(self,ram,storage,processor,skincolor):
-        self.skincolor=skincolor
-        self.ram=ram
-        self.storage=storage
-        self.processor=processor
-    def getskincolor(self):
-        print("skin color",self.skincolor)
-
-    def getram(self):
-        print("Ram:",self.ram)
-
-
-    def getstorage(self):
-        print("Storage: ",self.storage)
+    """
+    summary: This sever class provides server computer according to specifications provided by customer.
+    """
+    def __init__(self):
+        """
+        Summary:Initializes new instance of this class, inheriting super class here.
+        """
+        super().__init__()
+        self.color = self.getColor()
+        self.ram=self.getRam()
+        self.processor=self.getProcessor()
 
 
-    def getprocessor(self):
-        print("Processor: ",self.processor)
+    def getColor(self):
+       col = input("Input Color :\t")
+       return col
+
+    def getRam(self):
+        """
+        Summary: This function provides ram to server computer.
+        """
+        ram=int(input("input ram:\t"))
+        return ram
+
+    def getProcessor(self):
+        """
+        Summary: This function provides processsor for server computer.
+        """
+        processor = int(input("Input processor :\t"))
+        return processor
+
+    def displaySpec(self):
+        """
+        Summary:This function display specifications of server computer.
+        """
+        print("Your server computer is ready")
+        print("color: ", self.color)
+        print("Ram: ", self.ram)
+        print("processor: ", self.processor)
 
 
 class Laptop(Computer):
-    def __init__(self,ram,storage,processor,color):
-        self.color=color
-        self.ram=ram
-        self.storage=storage
-        self.processor = processor
+    """
+    Summary:This laptop class contains three methods,get color for laptop, get ram for laptop, get processor for laptop.
+    """
+    def __init__(self):
+        """
+        Summary:Initializes new instance of this class, and also inheriting computer class and also initializing super
+        class methods.
+        """
+        super().__init__()
+        self.color = self.getColor()
+        self.ram=self.getRam()
+        self.processor=self.getProcessor()
+
     def getcolor(self):
-        print("color: ",self.color)
-    def getram(self):
+        """
+        Summary:This function getcolor provides color to laptop.
+        """
+        col = input("Please provide your Color :\t")
+        return col
+
+    def getProcessor(self):
+        """
+        Summary:This function getprocessor provides processor to laptop.
+        """
+        processor = int(input("please provide your processor :\t"))
+        return processor
+
+    def getRam(self):
+        """
+        Summary:This function get ram provides ram to laptop.
+        """
+        ram=int(input("please provide your ram :\t"))
+        return ram
+
+    def displaySpec(self):
+        """
+        Summary:This function provides specifications of laptop.
+        """
+        print("Your server is ready")
+        print("Color: ",self.color)
         print("Ram: ",self.ram)
+        print("processor: ",self.processor)
 
-    def getstorage(self):
-        print("Storage: ",self.storage)
 
-    def getprocessor(self):
-        print("Processor: ",self.processor)
 
-def main():
-    print("Welcome to computer factory")
-    try:
-        option = int(input("Enter 1 to buy laptop\nEnter 2 to buy server computer"))
 
-        if option == 1:
-            print("please provide your laptop specifications")
-            ram=input("Enter ram=")
-            storage=input("Enter storage=")
-            processor=input("Enter processor=")
-            color=input("Enter color=")
+class ComputerFactory():
+    """
+    Summary:This computer factory class takes input from user, according to user wish, this computer factory produces
+    laptop or server computer.
+    """
 
-            laptop = Laptop(ram, storage, processor, color)
-            print("Your laptop is ready")
+    def choice(self):
+        """
+        Summary: This choice function provides options to user, so that customer can select according to his wish,
+        if customer chooses 1st option  it produces laptop, and if customer chooses then it produces server computer.
+        """
+        try:
+            user_choice = int(input("Enter 1 to  buy a laptop \nEnter 2 for server computer"))
+            if user_choice>2:
+                print("please enter data in 1 or 2")
+                self.choice()
+            else:
+                if user_choice==1:
+                    return Laptop()
+                elif user_choice==2:
+                    return Server()
+        except ValueError:
+            print("please enter data in number formnat")
+            self.choice()
 
-            laptop.getram()
-            laptop.getprocessor()
-            laptop.getstorage()
-            laptop.getcolor()
-        if option == 2:
-            print("please provide your server computer specifications")
-            ram = input("enter ram=")
-            storage = input("enter storage=")
-            processor = input("enter processor=")
-            skincolor = input("enter color=")
-            server = Server(ram,storage,processor,skincolor)
-            print("your server computer is ready")
-            server.getram()
-            server.getprocessor()
-            server.getstorage()
-            server.getskincolor()
-    except ValueError:
-        print("Please provide valid data")
-        main()
+if __name__ == '__main__':
+    """
+    Main driver code.
+    """
 
+    cf = ComputerFactory()
+    c = cf.choice()#o/p:Laptop or server
+    c.displaySpec()
